@@ -231,12 +231,14 @@ City.prototype.randomCustomerPerHour = function() {
 // Method for generating array of cookies per hour
 City.prototype.estCookiesSoldPerHour = function() {
   var storeTotal = 0;
+
   for ( var i = 0; i < hours.length; i++) {
     var cookies = Math.ceil(this.randomCustomerPerHour() * this.avgCookiesPerCustomer);
-    console.log(this.randomCustomerPerHour(), this.avgeCookiesPerCustomer);
+    console.log(this.randomCustomerPerHour(), this.avgCookiesPerCustomer);
     this.cookiesSoldPerHour.push(cookies);
     storeTotal = storeTotal + cookies;
   }
+
   this.cookiesSoldPerHour.push(storeTotal);
   return this.cookiesSoldPerHour;
 };
@@ -260,7 +262,6 @@ hourlyTotals();
 // Methode to loop through and render each City object's data in the table
 
 City.prototype.render = function() {
-  this.estCookiesSoldPerHour();
   var salesTableRow = document.createElement('tr');
   var tableDataName = document.createElement('td');
   tableDataName.textContent = this.cityname;
@@ -280,10 +281,12 @@ City.prototype.render = function() {
 // create function to render sales hours information in table.
 
 function renderHours() {
+
   var hoursTableRow = document.createElement('tr');
   var hourTableEmpty = document.createElement('th');
   hourTableEmpty.textContent = '';
   hoursTableRow.appendChild(hourTableEmpty);
+  
   for(var i = 0; i < hours.length; i++) {
     var hoursTableData = document.createElement('th');
     hoursTableData.textContent = hours[i];
@@ -335,21 +338,51 @@ function renderFooter() {
   salesTable.append(footerRow);
 }
 
-function renderAllCities () {
+function calcualteAllCookieData(){
+  for ( var i =0; i < cityArray.length; i++) {
+    cityArray[i].estCookiesSoldPerHour();
+  }
+}
+
+function renderAllCities() {
   for ( var i =0; i < cityArray.length; i++) {
     cityArray[i].render();
   }
 }
 
-renderHours();
+function formSubmitted(event){
+  event.preventDefault();
 
+  var newCity = new City (
+    document.getElementById('New-City').value,
+    parseInt(document.getElementById('Min-Cus').value),
+    parseInt(document.getElementById('Max-Cus').value),
+    parseInt(document.getElementById('The-Avg-Num-Coockies').value)
+  );
+
+  cityArray.push(newCity);
+
+  newCity.estCookiesSoldPerHour();
+  // newCity.render();
+
+  salesTable.innerHTML = '';
+
+  renderHours();
+  renderAllCities();
+  renderFooter();
+
+}
+
+// var forlistener = document.getElementById('new-location');
+// forlistener.addEventListener('submit',formSubmitted);
+
+renderHours();
+calcualteAllCookieData();
 renderAllCities();
 renderFooter();
 
-
-
-
-
+var forlistener = document.getElementById('new-location');
+forlistener.addEventListener('submit',formSubmitted);
 
 
 
