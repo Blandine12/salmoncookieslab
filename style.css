@@ -1,3 +1,15 @@
+span {
+  margin: 80px 200px;
+  color: aqua;
+  background-color: brown;
+}
+
+body {
+  background-color: bisque;
+
+}
+
+
 table, td, th {
   border: 1px solid lightcoral;
   background-color: lightsalmon;
@@ -12,9 +24,67 @@ th {
   height: 50px;
 }
 
-/* img {
-  width: 100px;
-  height: auto;
-  float: left;
-  margin: 50px;
-} */
+
+
+.img1 {
+  border: 1px solid #751a1a;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+
+}
+
+.img2 {
+  border: 1px solid #751a1a;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+.img3 {
+  border: 1px solid #751a1a;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+.img4 {
+  border: 1px solid #751a1a;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+
+.img5 { 
+  border: 1px solid #751a1a;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+  
+
+.img6{
+  border: 1px solid #751a1a;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+
+.img7 {
+  border: 1px solid #751a1a;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+a {
+  padding: 12px;
+  background-color: #222;
+  color: #eee;
+  margin: 0 auto;
+}
+
+
