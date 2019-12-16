@@ -25,30 +25,7 @@ th {
 }
 
 
-
-.img1 {
-  border: 1px solid #751a1a;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-
-}
-
-.img2 {
-  border: 1px solid #751a1a;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
-
-.img3 {
-  border: 1px solid #751a1a;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
-
-.img4 {
+.carouselImg {
   border: 1px solid #751a1a;
   border-radius: 4px;
   padding: 5px;
@@ -56,29 +33,6 @@ th {
 }
 
 
-.img5 { 
-  border: 1px solid #751a1a;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
-
-  
-
-.img6{
-  border: 1px solid #751a1a;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
-
-
-.img7 {
-  border: 1px solid #751a1a;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
 
 a {
   padding: 12px;
